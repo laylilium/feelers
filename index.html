@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/EB+Garamond:400,400i/Open+Sans:400,700">
+
+
+    <title>Wheelers Dubai</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="//brick.a.ssl.fastly.net/EB+Garamond:400,400i/Open+Sans:400,700">
+
+
+</head>
+
+<body>
+<div class="text-center" style="padding: 26px;"><img width="155" src="logo.svg"></div>
+
+
+<div class="container"><div id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill" style="background-image:url('1.jpg');"></div>
+            <div class="carousel-caption">
+                <h1></h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url('2.jpg');"></div>
+            <div class="carousel-caption">
+                <h1></h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image:url('3.jpg');"></div>
+            <div class="carousel-caption">
+                <h1></h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</div></div>
+
+<div class="container">
+
+    <div class="row section">
+        <div class="col-lg-6">
+            <h3>Contact Information</h3>
+
+            <p>
+
+                Tel: +971 (0)4 3860899 <br>
+                Email: wheelersreservation@rmalhospitality.ae<br>
+                Fax: +971 (0)4 3887086<br>
+
+            <h3>Address</h3>
+
+
+            <p>
+             Gate Village 02 DIFC<br>
+            P.O.Box 75626<br>
+            Dubai UAE<br>
+            </p>
+            <em>Complimentary valet parking available at parking entrance located outside gate village building
+                8</em> </p>
+
+        </div>
+        <div class="col-lg-6">
+           <div id="map">
+
+           </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                
+            </div>
+        </div>
+    </footer>
+
+</div>
+<!-- /.container -->
+
+<!-- JavaScript -->
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<!-- Script to Activate the Carousel -->
+<script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    $(function () {
+        if ($('#map').length) {
+            var map = new GMaps({
+                el: "#map",
+                lat: 25.214769,
+                lng: 55.280929,
+                zoom: 16,
+                scrollwheel: false,
+                navigationControl: false,
+
+                scaleControl: false,
+                draggable: false,
+                streetViewControl: false,
+                mapTypeControl: false,
+                keyboardShortcuts: false,
+                panControl: false,
+                zoomControlOptions: {
+                    style: google.maps.ZoomControlStyle.SMALL
+
+                },
+
+
+                panControl: true,
+                streetViewControl: false,
+                mapTypeControl: false,
+                overviewMapControl: false
+            });
+
+            var styles = [
+                {
+                    stylers: [
+                        { hue: "#007565" },
+                        { saturation: -75 }
+                    ]
+                }
+            ];
+
+            map.addStyle({
+                styledMapName: "Styled Map",
+                styles: styles,
+                mapTypeId: "map_style"
+            });
+
+            map.setStyle("map_style");
+
+            map.addMarker({
+
+                lat: 25.214769,
+                lng: 55.280929
+
+            });
+        }
+    });
+
+</script>
+<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+
+<script type="text/javascript" src="gmaps.js"></script>
+
+</body>
+
+</html>
